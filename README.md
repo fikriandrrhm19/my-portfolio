@@ -44,7 +44,7 @@ Make sure you have Node.js (version 20.x or higher) and npm installed on your ma
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/fikriandrrhm19/my-portfolio.git](https://github.com/fikriandrrhm19/my-portfolio.git)
+    git clone https://github.com/fikriandrrhm19/my-portfolio.git
     cd my-portfolio
     ```
 
