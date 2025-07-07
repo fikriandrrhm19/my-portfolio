@@ -1,0 +1,14 @@
+# docker-compose.yml
+
+version: '3.8'
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-portfolio-app
+    ports:
+      - "80:3000"
+    restart: unless-stopped
+    environment:
+      - RESEND_API_KEY=re_GMwq5Zv6_bAn5ziuoXDt6KyRcxVx2Y4TZ
