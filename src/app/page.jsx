@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/home/HeroSection';
-import AboutMeSection from '@/components/sections/home/AboutMeSection';
-import SkillsSection from '@/components/sections/home/SkillsSection';
-import ExperienceSection from '@/components/sections/home/ExperienceSection';
-import ContactCTASection from '@/components/sections/home/ContactCTASection';
 import PageEndWave from '@/components/layouts/PageEndWave';
+
+const AboutMeSection = dynamic(() => import('@/components/sections/home/AboutMeSection'), { loading: () => <div className="h-screen" /> });
+const SkillsSection = dynamic(() => import('@/components/sections/home/SkillsSection'), { loading: () => <div className="h-screen" /> });
+const ExperienceSection = dynamic(() => import('@/components/sections/home/ExperienceSection'), { loading: () => <div className="h-screen" /> });
+const ContactCTASection = dynamic(() => import('@/components/sections/home/ContactCTASection'));
 
 export default function HomePage() {
   return (

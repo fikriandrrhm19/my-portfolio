@@ -1,5 +1,7 @@
-import CertificatesSection from '@/components/sections/certificates';
+import dynamic from 'next/dynamic';
 import PageEndWave from '@/components/layouts/PageEndWave';
+
+const CertificatesSection = dynamic(() => import('@/components/sections/certificates'), { loading: () => <div className="h-screen" /> });
 
 export const metadata = {
   title: 'Certificates',

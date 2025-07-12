@@ -1,8 +1,10 @@
+import dynamic from 'next/dynamic';
 import WhoIAmHeroSection from '@/components/sections/who-i-am/WhoIAmHeroSection';
-import EducationSection from '@/components/sections/who-i-am/EducationSection';
-import WhatIDoSection from '@/components/sections/who-i-am/WhatIDoSection';
-import ConnectWithMeSection from '@/components/sections/who-i-am/ConnectWithMeSection';
 import PageEndWave from '@/components/layouts/PageEndWave';
+
+const EducationSection = dynamic(() => import('@/components/sections/who-i-am/EducationSection'), { loading: () => <div className="h-screen" /> });
+const WhatIDoSection = dynamic(() => import('@/components/sections/who-i-am/WhatIDoSection'), { loading: () => <div className="h-screen" /> });
+const ConnectWithMeSection = dynamic(() => import('@/components/sections/who-i-am/ConnectWithMeSection'));
 
 export const metadata = {
   title: 'About Me',

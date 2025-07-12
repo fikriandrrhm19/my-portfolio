@@ -1,5 +1,7 @@
-import ProjectsSection from '@/components/sections/projects';
+import dynamic from 'next/dynamic';
 import PageEndWave from '@/components/layouts/PageEndWave';
+
+const ProjectsSection = dynamic(() => import('@/components/sections/projects'), { loading: () => <div className="h-screen" /> });
 
 export const metadata = {
   title: 'Projects',

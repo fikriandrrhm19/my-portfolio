@@ -1,5 +1,7 @@
-import ContactSection from '@/components/sections/contact';
+import dynamic from 'next/dynamic';
 import PageEndWave from '@/components/layouts/PageEndWave';
+
+const ContactSection = dynamic(() => import('@/components/sections/contact'), { loading: () => <div className="h-screen" /> });
 
 export const metadata = {
   title: 'Contact Me',
